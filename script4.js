@@ -9,8 +9,8 @@ window[loadsetting] = function (settings) {
 
 var script = document.createElement("script");
 
-script.id = "script_" + loadsetting;
-script.src = "https://8b66-2409-4063-6e1e-69b-c007-9f6d-c89a-18b6.ngrok.io/setting?callback=loadsetting&version="+version;
+script.id = "script_" + version;
+script.src = "https://8b66-2409-4063-6e1e-69b-c007-9f6d-c89a-18b6.ngrok.io/setting?callback=loadsetting&version"+version;
 
 
 document.body.appendChild(script);
