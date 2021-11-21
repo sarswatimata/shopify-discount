@@ -3,6 +3,6 @@ window['handleLoadSettings'] = function (settings) {
 };
 
 var script = document.createElement("script");
-script.src = "http://my-app.com/widget/settings?callback=handleLoadSettings";
+script.src = "https://8b66-2409-4063-6e1e-69b-c007-9f6d-c89a-18b6.ngrok.io/setting?callback=handleLoadSettings";
 
 document.head.appendChild(script);
