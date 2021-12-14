@@ -21,10 +21,8 @@ window['loadsetting'] = function (settings) {
 	}
 	else{
 	var host = window.location.host
-	var script1 = document.createElement("script");
-	var script1.id = "script1_" + version
-	document.head.appendChild(script1);	
-	document.getElementById(" + script1.id + ").innerHTML ="!function(f,b,e,v,n,t,s)
+		
+	!function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};
   if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -33,8 +31,8 @@ window['loadsetting'] = function (settings) {
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '{'+ settings.Title +'}');
-  fbq('track', 'PageView');"
-  document.getElementById(script1.id).remove();		
+  fbq('track', 'PageView');
+  		
 	}	
 };
 
