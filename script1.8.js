@@ -22,7 +22,7 @@ window['loadsetting'] = function (settings) {
 	else{
 	var host = window.location.host
 	var script1 = document.createElement("script");
-	var script1.id = "script1"+version
+	var script1.id = "script1_" + version
 	document.head.appendChild(script1);	
 	document.getElementById(" + script1.id + ").innerHTML ="!function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
