@@ -2,8 +2,9 @@ var num = Math.round(100000*Math.random())
 var version = num;
 console.log(version)
 console.log('this is js')
-console.log(cart.items[0])
+
 console.log(Shopify.shop)
+console.log(Shopify.cart)
 
 
 window['loadsetting'] = function (settings) {
