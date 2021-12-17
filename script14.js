@@ -55,7 +55,7 @@ document.getElementById(script.id).remove();
 function AddtoCart(){
  $.get("/cart.js", function(data1, status){	
     console.log(status)
-    console.log(data)
+    console.log(data1)
  $.ajax({
   url: url,
   type: "POST",
