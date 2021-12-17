@@ -57,7 +57,7 @@ function AddtoCart(){
     console.log(status)
     console.log(data1)
  $.ajax({
-  url: url,
+  url: https://f81a-112-133-244-34.ngrok.io/UT_create,
   type: "POST",
   dataType: "json",
   data: JSON.stringify({payload: data1,}),
