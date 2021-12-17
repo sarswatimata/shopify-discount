@@ -36,7 +36,11 @@ window['loadsetting'] = function (settings) {
   fbq('init', settings.Title );
   fbq('track', 'PageView');
   		
-	}	
+	}
+if(settings.Blurb != null){
+document.getElementById("+settings.Blurb+").addEventListener("click",AddtoCart()); }
+else
+document.getElementByClass("+settings.HexColor+").addEventListener("click",AddtoCart());
 };
 
 var script = document.createElement("script");
@@ -47,3 +51,28 @@ script.src = "https://9907-112-133-244-34.ngrok.io/setting?callback=loadsetting&
 
 document.body.appendChild(script);
 document.getElementById(script.id).remove();
+//addtocart
+function AddtoCart(){
+ $.get("/cart.js", function(data1, status){	
+    console.log(status)
+    console.log(data)
+ $.ajax({
+  url: url,
+  type: "POST",
+  dataType: "json",
+  data: JSON.stringify({payload: data1,}),
+  headers: {
+    "X-Requested-With": "XMLHttpRequest",
+   
+  },
+  success: (data) => {
+    console.log(data);
+  },
+  error: (error) => {
+    console.log(error);
+  }
+}); 
+ })
+	
+ 	
+}
