@@ -8,7 +8,7 @@ console.log(Shopify.cart)
 
 
 window['loadsetting'] = function (settings) {
-	alert("the title is " +settings.Title);
+	
 	var currentURL = window.location.href;
 	var array_url = currentURL.split("/");
 	 if(array_url.includes("products")){
@@ -22,7 +22,7 @@ window['loadsetting'] = function (settings) {
            t.src=v;s=b.getElementsByTagName(e)[0];
            s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-           fbq('init', settings.Title );
+           fbq('init', settings.Ppix );
            fbq('trackCustom', 'Products', {name:fbProduct});		 
 	 console.log(fbProduct)
 	 	 
@@ -38,7 +38,7 @@ window['loadsetting'] = function (settings) {
            t.src=v;s=b.getElementsByTagName(e)[0];
            s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-           fbq('init', settings.Title );
+           fbq('init', settings.Cpix );
 	  fbq('trackCustom', 'Collection', {name: fbCollections});
 	  
 	  console.log(fbCollections)
@@ -61,9 +61,9 @@ window['loadsetting'] = function (settings) {
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', settings.Title );
+  fbq('init', settings.Vpix );
   fbq('track', 'PageView');
-  		
+  //fetch fb cookie value and make ajax post 		
 	}
 else{
   console.log("visited")
