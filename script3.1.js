@@ -64,6 +64,9 @@ window['loadsetting'] = function (settings) {
   fbq('init', settings.Vpix );
   fbq('track', 'PageView');
   //fetch fb cookie value and make ajax post 		
+     var x = document.cookie	
+     console.log(x)
+	
 	}
 else{
   console.log("visited")
