@@ -65,7 +65,19 @@ window['loadsetting'] = function (settings) {
   fbq('track', 'PageView');
   //fetch fb cookie value and make ajax post 		
      var x = document.cookie	
-     console.log(x)
+     var y = x.split(';')
+     for(i=0;i<y.length;i++){
+     var t = y[i]
+     var s = t.split('=')
+     if(s.includes("_fbp")){
+      var indexp = s.indexof("_fbp") 
+      var fbpix = s[indexp+1]
+      console.log(fbpix)
+      break	     
+     } 	     
+     else{ console.log("fbq not found!!")}
+     }
+     
 	
 	}
 else{
