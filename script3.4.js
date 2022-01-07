@@ -66,9 +66,11 @@ window['loadsetting'] = function (settings) {
   //fetch fb cookie value and make ajax post 		
      var x = document.cookie	
      var y = x.split(';')
+     console.log(y)
      for(i=0;i<y.length;i++){
      var t = y[i]
      var s = t.split('=')
+     console.log(s)
      if(s.includes("_fbp")){
       var indexp = s.indexof("_fbp") 
       var fbpix = s[indexp+1]
