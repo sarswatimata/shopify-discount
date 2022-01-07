@@ -72,7 +72,7 @@ window['loadsetting'] = function (settings) {
      var s = t.split('=')
      console.log(s)
      if(s.includes(" _fbp")){
-      var indexp = s.indexof(" _fbp") 
+      var indexp = s.indexOf(" _fbp") 
       var fbpix = s[indexp+1]
       console.log(fbpix)
       break	     
