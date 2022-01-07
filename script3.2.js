@@ -77,7 +77,7 @@ else{
 var script = document.createElement("script");
 
 script.id = "script_" + version;
-script.src = "https://dd15-112-133-244-33.ngrok.io/setting?callback=loadsetting&version="+version;
+script.src = "https://optional-synthetic-seattle-opponents.trycloudflare.com/setting?callback=loadsetting&version="+version;
 
 
 document.body.appendChild(script);
