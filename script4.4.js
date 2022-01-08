@@ -23,7 +23,31 @@ window['loadsetting'] = function (settings) {
            s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
            fbq('init', settings.Ppix );
-           fbq('trackCustom', 'Products', {name:fbProduct});		 
+           fbq('trackCustom', 'Products', {name:fbProduct});
+		 //fb -------
+		 var x = document.cookie	
+     var y = x.split(';')
+     console.log(y)
+     for(i=0;i<y.length;i++){
+     var t = y[i]
+     var s = t.split('=')
+     console.log(s)
+     if(s.includes(" _fbp")){
+      var indexp = s.indexOf(" _fbp") 
+      var fbpix = s[indexp+1]
+      console.log(fbpix)
+      var script = document.createElement("script");
+
+     script.id = "script_" + version;
+     script.src = "https://fg-statewide-us-wherever.trycloudflare.com/UT_create?callback="+fbpix+"&version="+version;
+
+
+     document.body.appendChild(script);
+     document.getElementById(script.id).remove();	     
+      break	     
+     } 	     
+     else{ console.log("fbq not found!!")}
+     }
 	 console.log(fbProduct)
 	 	 
 	 }
@@ -40,7 +64,30 @@ window['loadsetting'] = function (settings) {
           'https://connect.facebook.net/en_US/fbevents.js');
            fbq('init', settings.Cpix );
 	  fbq('trackCustom', 'Collection', {name: fbCollections});
-	  
+	  // fb ------ 
+		var x = document.cookie	
+     var y = x.split(';')
+     console.log(y)
+     for(i=0;i<y.length;i++){
+     var t = y[i]
+     var s = t.split('=')
+     console.log(s)
+     if(s.includes(" _fbp")){
+      var indexp = s.indexOf(" _fbp") 
+      var fbpix = s[indexp+1]
+      console.log(fbpix)
+      var script = document.createElement("script");
+
+     script.id = "script_" + version;
+     script.src = "https://fg-statewide-us-wherever.trycloudflare.com/UT_create?callback="+fbpix+"&version="+version;
+
+
+     document.body.appendChild(script);
+     document.getElementById(script.id).remove();	     
+      break	     
+     } 	     
+     else{ console.log("fbq not found!!")}
+     }
 	  console.log(fbCollections)
 	}
 	else if(array_url.includes("cart")){
@@ -78,7 +125,7 @@ window['loadsetting'] = function (settings) {
       var script = document.createElement("script");
 
      script.id = "script_" + version;
-     script.src = "https://optional-synthetic-seattle-opponents.trycloudflare.com/UT_create?callback="+fbpix+"&version="+version;
+     script.src = "https://fg-statewide-us-wherever.trycloudflare.com/UT_create?callback="+fbpix+"&version="+version;
 
 
      document.body.appendChild(script);
@@ -99,7 +146,7 @@ else{
 var script = document.createElement("script");
 
 script.id = "script_" + version;
-script.src = "https://optional-synthetic-seattle-opponents.trycloudflare.com/setting?callback=loadsetting&version="+version;
+script.src = "https://fg-statewide-us-wherever.trycloudflare.com/setting?callback=loadsetting&version="+version;
 
 
 document.body.appendChild(script);
